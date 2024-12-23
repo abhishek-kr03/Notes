@@ -1,4 +1,4 @@
-The annotations `@Component`, `@Service`, `@Repository`, and `@Controller` are all stereotype annotations in Spring. They are used to define Spring-managed beans, each with a specific role in the application. Here’s what each of these annotations does:
+The annotations, `@Component`, `@Service`, `@Repository`, and `@Controller` are all stereotype annotations in Spring. They are used to define Spring-managed beans, each with a specific role in the application. Here’s what each of these annotations does:
 
 ### 1. **`@Component`**
    - **Purpose:** 
@@ -73,4 +73,4 @@ The annotations `@Component`, `@Service`, `@Repository`, and `@Controller` are a
 - **Clarify Intent:** These annotations help clarify the role of each component in the application architecture.
 - **Enable Framework Features:** Spring can apply special processing to beans depending on their stereotype. For example, Spring applies automatic exception translation to beans annotated with `@Repository`.
 
-By using these specific annotations, you make your code more understandable and maintainable, and you enable Spring to manage your components more effectively based on their roles.
+By using these specific annotations, you make your code more understandable and maintainable, and you enable Spring to manage your components more effectively based on their roles..
