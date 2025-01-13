@@ -1,0 +1,167 @@
+1. Lambda Expressions
+
+What it is: A concise way to represent a function interface (an interface with only one abstract method).
+
+Example:
+
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.forEach(name -> System.out.println(name));
+
+
+
+---
+
+2. Functional Interfaces
+
+What it is: An interface with a single abstract method, like Runnable or Comparator. New functional interfaces like Consumer, Supplier, and Predicate were introduced in java.util.function.
+
+Example:
+
+@FunctionalInterface
+interface MyFunction {
+    int add(int a, int b);
+}
+
+
+
+---
+
+3. Stream API
+
+What it is: A powerful way to process collections and data in a functional style (e.g., filtering, mapping, and reducing).
+
+Example:
+
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+numbers.stream()
+       .filter(n -> n % 2 == 0)
+       .forEach(System.out::println);
+
+
+
+---
+
+4. Default Methods in Interfaces
+
+What it is: Interfaces can now have methods with default implementations, allowing backward compatibility.
+
+Example:
+
+interface Vehicle {
+    default void start() {
+        System.out.println("Vehicle is starting...");
+    }
+}
+
+
+
+---
+
+5. Optional Class
+
+What it is: A container for handling null values and avoiding NullPointerException.
+
+Example:
+
+Optional<String> optional = Optional.ofNullable(null);
+System.out.println(optional.orElse("Default Value"));
+
+
+
+---
+
+6. Date and Time API
+
+What it is: New java.time package replaces the old Date and Calendar classes with a more powerful and easier-to-use API.
+
+Example:
+
+LocalDate date = LocalDate.now();
+System.out.println(date);
+
+
+
+---
+
+7. Nashorn JavaScript Engine
+
+What it is: A new engine to execute JavaScript code in the JVM.
+
+Example:
+
+ScriptEngineManager manager = new ScriptEngineManager();
+ScriptEngine engine = manager.getEngineByName("nashorn");
+engine.eval("print('Hello from JavaScript');");
+
+
+
+---
+
+8. Method References
+
+What it is: A shorthand for writing lambda expressions referring to methods or constructors.
+
+Example:
+
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.forEach(System.out::println);
+
+
+
+---
+
+9. Collectors
+
+What it is: A utility to process and collect data from streams.
+
+Example:
+
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> evenNumbers = numbers.stream()
+                                   .filter(n -> n % 2 == 0)
+                                   .collect(Collectors.toList());
+
+
+
+---
+
+10. Parallel Streams
+
+What it is: A way to execute streams in parallel to improve performance.
+
+Example:
+
+List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+numbers.parallelStream()
+       .forEach(System.out::println);
+
+
+
+---
+
+11. Base64 Encoding and Decoding
+
+What it is: A utility to encode and decode strings in Base64 format.
+
+Example:
+
+Base64.Encoder encoder = Base64.getEncoder();
+String encoded = encoder.encodeToString("Hello".getBytes());
+System.out.println(encoded);
+
+
+
+---
+
+12. Static Methods in Interfaces
+
+What it is: Interfaces can now have static methods, similar to utility methods in classes.
+
+Example:
+
+interface Utility {
+    static void print() {
+        System.out.println("Static Method in Interface");
+    }
+}
+Utility.print();
