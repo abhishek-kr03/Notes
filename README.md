@@ -230,3 +230,18 @@ Here’s a quick reference:
 Would you like help setting up or practicing specific steps? Let me know!
 
 
++------------------+                        +----------------------+
+   |   Employee       |                        |     Dependent        |
+   |------------------|                        |----------------------|
+   | EmpID (PK)       |◄─────────────┐         | Dependent_Name (PK*) |
+   | Name             |              │         | Age                  |
+   | Department       |              │         +----------------------+
+   +------------------+              │
+                                     │
+                                Identifying
+                               Relationship
+                                     │
+                          +---------------------+
+                          |        Has          |
+                          +---------------------+
+
